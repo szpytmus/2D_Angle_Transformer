@@ -66,6 +66,11 @@ class PointRotation:
         # Start the Tkinter event loop for the new window
         df_window.mainloop()
 
+    def df_and_plot(self):
+        self.generate_rotation_matrix()
+        self.plot_rotation()
+        self.show_dataframe()
+
     def save_dataframe_as_file(self):
         # Ask user for file path and name
         file_path = filedialog.asksaveasfilename(defaultextension=".txt",

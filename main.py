@@ -20,13 +20,12 @@ def submit_form():
     rotation.generate_rotation_matrix(angle_begin, angle_end)
 
     # Generate rotation matrix and plot
-    rotation.plot_rotation()
-    rotation.show_dataframe()
+    rotation.df_and_plot()
 
 
 # Create the main window
 window = tk.Tk()
-window.title("Tkinter Form Template")
+window.title("2D Point Transformation")
 
 # Create Entry widgets
 entry1 = tk.Entry(window)
@@ -50,21 +49,21 @@ angle_step_label = tk.Label(window, text="Angle Step:")
 submit_button = tk.Button(window, text="Submit", command=submit_form)
 
 # Arrange widgets in the grid
-label1.grid(row=0, column=0, sticky="e")
-entry1.grid(row=0, column=1)
-label2.grid(row=1, column=0, sticky="e")
-entry2.grid(row=1, column=1)
-label3.grid(row=2, column=0, sticky="e")
-entry3.grid(row=2, column=1)
-label4.grid(row=3, column=0, sticky="e")
-entry4.grid(row=3, column=1)
-line_label1.grid(row=4, column=0, sticky="e")
-line_entry1.grid(row=4, column=1)
-line_label2.grid(row=4, column=2, sticky="e")
-line_entry2.grid(row=4, column=3)
-angle_step_label.grid(row=5, column=3, sticky="e")
-angle_step_entry.grid(row=5, column=4)
-submit_button.grid(row=6, column=2)
+label1.grid(row=0, column=0, sticky="e", pady=5, padx=5)
+entry1.grid(row=0, column=1, pady=5, padx=5)
+label2.grid(row=1, column=0, sticky="e", pady=5, padx=5)
+entry2.grid(row=1, column=1, pady=5, padx=5)
+label3.grid(row=2, column=0, sticky="e", pady=5, padx=5)
+entry3.grid(row=2, column=1, pady=5, padx=5)
+label4.grid(row=3, column=0, sticky="e", pady=5, padx=5)
+entry4.grid(row=3, column=1, pady=5, padx=5)
+line_label1.grid(row=4, column=0, sticky="e", pady=5, padx=5)
+line_entry1.grid(row=4, column=1, pady=5, padx=5)
+line_label2.grid(row=4, column=2, sticky="e", pady=5, padx=5)
+line_entry2.grid(row=4, column=3, pady=5, padx=5)
+angle_step_label.grid(row=4, column=4, sticky="e", pady=5, padx=5)
+angle_step_entry.grid(row=4, column=5, pady=5, padx=5)
+submit_button.grid(row=6, column=2, pady=10)
 
 # Start the Tkinter event loop
 window.mainloop()
