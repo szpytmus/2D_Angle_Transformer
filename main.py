@@ -1,18 +1,19 @@
 import tkinter as tk
 from rotation import PointRotation
 
+
 def submit_form():
     # Get the values from the entries
-    real_centre_Z = float(entry1.get())
-    real_centre_Y = float(entry2.get())
-    point_to_rotate_Z = float(entry3.get())
-    point_to_rotate_Y = float(entry4.get())
+    real_centre_z = float(entry1.get())
+    real_centre_y = float(entry2.get())
+    point_to_rotate_z = float(entry3.get())
+    point_to_rotate_y = float(entry4.get())
     angle_begin = int(line_entry1.get())
     angle_end = int(line_entry2.get())
     angle_step = int(angle_step_entry.get())  # New entry for angle step
 
     # Create an instance of PointRotation
-    rotation = PointRotation(real_centre_Z, real_centre_Y, point_to_rotate_Z, point_to_rotate_Y)
+    rotation = PointRotation(real_centre_z, real_centre_y, point_to_rotate_z, point_to_rotate_y)
 
     # Set the angle range and step
     rotation.set_angle_step(angle_step)
@@ -21,6 +22,7 @@ def submit_form():
     # Generate rotation matrix and plot
     rotation.plot_rotation()
     rotation.show_dataframe()
+
 
 # Create the main window
 window = tk.Tk()
